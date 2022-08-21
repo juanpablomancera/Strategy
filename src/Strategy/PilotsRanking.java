@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class PilotsRanking {
     ArrayList<Pilot> pilots;
-    Context contexto;
+    Context context;
 
     public PilotsRanking(){
 
         pilots = new ArrayList<>();
-        contexto = new Context();
+        context = new Context();
     }
 
     public void addNewPilot(Pilot pilot, int startingPostion) {
@@ -18,14 +18,14 @@ public class PilotsRanking {
     }
 
     public void setStrategy(int strategy){
-        contexto.setStrategy(strategy);
+        context.setStrategy(strategy);
     }
 
     @Override
     public String toString() {
         String string = "";
         for (int i = 0; i < pilots.size(); i++) {
-            string += contexto.printPilot(pilots.get(i),i) + "\n";
+            string += context.printPilot(pilots.get(i),i) + "\n";
         }
         return string;
     }
